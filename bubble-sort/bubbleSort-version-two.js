@@ -1,9 +1,11 @@
 function bubbleSort(arr) {
- // iterate through our array
- for (var i = 0; i < arr.length; i++) {
-    // this loop will allow us to compare all
-    // our elements
-    for (var j = 0; j < arr.length; j++) {
+ // set `i` to length of array with a text case of `i > 0` and decrement value of
+ // `i` by `1`.
+ for (var i = arr.length; i > 0; i--) {
+    // by setting the test case to `i - 1` we will avoid unessessary comparisons
+    // for the last element that has already been sorted
+    for (var j = 0; j < i - 1; j++) {
+        console.log(arr, arr[j], arr[j+1]);
         // if lower index value is greater than
         // higher index, swap
         if (arr[j] > arr[j + 1]) {
